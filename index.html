@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Linea 7 MetroCDMX</title>
+    <title> Metro General CDMX </title>
     <style>
         * {
             margin: 0;
@@ -388,13 +388,13 @@
 <body>
     <div class="container">
         <header>
-            <h1>Linea 7 Metro CDMX</h1>
-            <p class="subtitle">Escanea tu tarjeta del Metro</p>
+            <h1> Mapa General Del Metro CDMX</h1>
+            <p class="subtitle"> escanea tu tarjeta del metro</p>
         </header>
         
         <section class="scan-section">
             <h2>Escanear Tarjeta del Metro CDMX</h2>
-            <p>Usa la cámara de tu dispositivo para escanear tu tarjeta</p>
+            <p>Usa la cámara de tu dispositivo para escanear el código QR de tu tarjeta</p>
             
             <div class="camera-container">
                 <div class="camera-placeholder" id="cameraPlaceholder">
@@ -420,14 +420,14 @@
             </div>
             
             <div class="status-message" id="statusMessage">
-                Activa la cámara y enfoca tu tarjeta del Metro CDMX
+                Activa la cámara y enfoca el código QR de tu tarjeta del Metro CDMX
             </div>
             
             <div class="qr-instructions">
                 <h4>Instrucciones para el escaneo:</h4>
                 <p>1. Activa la cámara con el botón "Activar Cámara"</p>
-                <p>2. Enfoca tu tarjeta del Metro dentro del marco verde</p>
-                <p>3. El sistema detectará automáticamente la tarjeta/p>
+                <p>2. Enfoca el código QR de tu tarjeta del Metro dentro del marco verde</p>
+                <p>3. El sistema detectará automáticamente el código QR</p>
                 <p>4. Si no tienes una tarjeta física, usa el "Modo Demostración"</p>
             </div>
             
@@ -439,25 +439,37 @@
         
         <section class="map-section" id="mapSection">
             <div class="map-container">
-                <h2 class="map-title">Mapa de la linea 7 de la Ciudad de México</h2>
-                <img src="assets/linea7.jpg" alt="Mapa de la linea 7 de la CDMX" class="map-image" id="mapImage">
+                <h2 class="map-title">Mapa de la Linea 4 de la Ciudad de México</h2>
+                <img src="assets/lineadmetro9.jpg" alt="Mapa De la Linea 4 CDMX" class="map-image" id="mapImage">
             </div>
             
             <div class="instructions">
-                <h3>Información de la linea 7 </h3>
-                <p>La Línea 7 facilita el acceso a importantes espacios culturales y recreativos como el Museo Nacional de Antropología, el Auditorio Nacional, el Bosque de Chapultepec, el Museo Soumaya, la Torre Mayor y la zona de Polanco.</p>
+                <h3> Información del metro CDMX  </h3>
+                <p> El Metro de la Ciudad de México (STC) es un sistema de transporte masivo subterráneo, de superficie y elevado, eléctrico, que moviliza a millones de personas diariamente, conectando diversas zonas de la ciudad con una red extensa de líneas, estaciones y una tarifa accesible de 5 pesos, ofreciendo arte, historia y eficiencia como medio de transporte fundamental en la capital mexicana, funcionando con trenes que pueden transportar más de mil personas por vagón y operando hasta medianoche. <p>
                 
                 <div class="step">
                     <div class="step-number">1</div>
-                    <div>Estación Terminal: Barranca del Muerto </div>
+                    <div> El Metro de la Ciudad de México tiene 12 líneas en total, identificadas por números (1-9, 12) y letras (A, B), cada una con un color distintivo y cubriendo diferentes partes de la ciudad y su área metropolitana, con estaciones subterráneas, a nivel de calle y elevadas, formando una red de transporte extensa y vital.</div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <div>Estación Terminal: El Rosario </div>
+                    <div> Las 12 Líneas son:
+                    Línea 1: Rosa (Pantitlán - Observatorio)
+                    Línea 2: Azul (Cuatro Caminos - Tasqueña)
+                    Línea 3: Verde Olivo (Indios Verdes - Universidad)
+                    Línea 4: Cian (Martín Carrera - Santa Anita)
+                    Línea 5: Amarilla (Politécnico - Pantitlán)
+                    Línea 6: Roja (El Rosario - Martín Carrera)
+                    Línea 7: Naranja (El Rosario - Barranca del Muerto)
+                    Línea 8: Verde (Garibaldi - Constitución de 1917)
+                    Línea 9: Café (Tacubaya - Pantitlán)
+                    Línea A: Morada (Pantitlán - La Paz)
+                    Línea B: Verde con Gris (Ciudad Azteca - Buenavista)
+                    Línea 12: Dorada (Mixcoac - Tláhuac) </div>
                 </div>
                 
-                <p>El horario de servicio es de 5:00 A 23:00 HRS, 6:00 A 23:00 HRS, 7:00 A 23:00 HRS entre semana</p>
+                <p>El horario habitual del Metro CDMX es: Lunes a viernes de 5:00 a 24:00 hrs, sábados de 6:00 a 24:00 hrs, y domingos y días festivos de 7:00 a 24:00 hrs, aunque pueden existir cierres anticipados por obras o eventos especiales, especialmente en la Línea 1.</p>
                 
             <button class="back-button" id="backButton">Regresar al Escáner</button>
         </section>
@@ -624,7 +636,7 @@
             const trips = Math.floor(Math.random() * 15);
             
             // Mostrar mensaje de éxito
-            statusMessage.textContent = ✓ Código QR detectado: Tarjeta ${cardUID.substring(0, 8)};
+            statusMessage.textContent = `✓ Código QR detectado: Tarjeta ${cardUID.substring(0, 8)}`;
             statusMessage.className = "status-message status-success";
             
             // Detener cámara
@@ -741,4 +753,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
